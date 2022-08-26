@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Запись на прём</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="dns-prefetch" href="//unpkg.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+    />
+  </head>
+  <body>
+    <div class="container w-100 mx-auto">
+      <header class="mt-4">
+        <nav
+          class="border border-blue-400 rounded-tr rounded-tl py-5 px-4 bg-blue-400 flex justify-between"
+        >
+          <a class="mx-2 flex justify-around" href="/">
+            <div class="flex justify-start">
+              <svg
+                style="color: white; cursor: pointer"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-eye"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+                  fill="white"
+                ></path>
+                <path
+                  d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+                  fill="white"
+                ></path>
+              </svg>
+              <p class="mx-2 text-white text-lg">Ocovision</p>
+            </div>
+          </a>
+          <ul>
+            <li>
+              <a class="inline-block hover:underline text-white text-lg" href="/login.html"
+                >Войти</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- This is an example component -->
+      <div class="text-gray-900 bg-gray-200">
+        <div class="p-4 flex justify-between">
+          <h1 class="ml-5 text-3xl">Расписание приёма</h1>
+          <button
+            type="button"
+            class="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+          >
+            Сохранить изменения
+          </button>
+        </div>
+
+        <div class="px-3 py-4 flex">
+          <!-- This is an example component -->
+          <div class="max-w-max">
+            <div class="border-b border-gray-200 dark:border-gray-700 mb-4">
+              <ul
+                class="flex flex-wrap -mb-px"
+                id="myTab"
+                data-tabs-toggle="#myTabContent"
+                role="tablist"
+              >
+                <li class="mr-2" role="presentation">
+                  <button
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                    id="dashboard-tab"
+                    data-tabs-target="#dashboard"
+                    type="button"
+                    role="tab"
+                    aria-controls="dashboard"
+                    aria-selected="true"
+                  >
+                    Расписание по дням
+                  </button>
+                </li>
+                <li class="mr-2" role="presentation">
+                  <button
+                    class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                    id="profile-tab"
+                    data-tabs-target="#profile"
+                    type="button"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false"
+                  >
+                    Перерыв
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div id="myTabContent">
+              <div
+                class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800"
+                id="dashboard"
+                role="tabpanel"
+                aria-labelledby="dashboard-tab"
+              >
+                <div class="container">
+                  <div class="flex justify-between">
+                    <label
+                      for="monday"
+                      class="inline-flex relative items-center mb-5 cursor-pointer"
+                    >
+                      <input type="checkbox" value="" id="monday" class="sr-only peer" />
+
+                      <div
+                        class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600"
+                      ></div>
+                      <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Понедельник</span
+                      ></label
+                    >
+                    <p class="ml-3">С</p>
+                    <input
+                      type="time"
+                      id="appt"
+                      name="appt"
+                      min="09:00"
+                      max="18:00"
+                      required
+                      class="ml-2 h-8"
+                    />
+                    <p class="ml-3">До</p>
+                    <input
+                      type="time"
+                      id="appt"
+                      name="appt"
+                      min="09:00"
+                      max="18:00"
+                      required
+                      class="ml-2 h-8"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <p class="text-gray-500 dark:text-gray-400 text-sm">
+                  This is some placeholder content the
+                  <strong class="font-medium text-gray-800 dark:text-white"
+                    >Profile tab's associated content</strong
+                  >. Clicking another tab will toggle the visibility of this one for the next. The
+                  tab JavaScript swaps classes to control the content visibility and styling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+  </body>
+</html>
